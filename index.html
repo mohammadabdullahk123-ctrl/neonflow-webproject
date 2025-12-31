@@ -36,5 +36,33 @@
             <p class="card-text">And to top it off, you can access it anywhere on any device</p>
         </div>
     </section>
+    <button onclick="openModal()">SIGN UP</button>
+    <div id ="popup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <input type="email" placeholder="EMAIL" />
+            <input type="password" placeholder="PASSWORD" />
+            <button onclick="submitForm()">SUBMIT</button>
+        </div>
+    </div>
+    <script>
+function openModal() {
+  document.getElementById("popup-modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("popup-modal").style.display = "none";
+}
+
+function submitForm() {
+  alert("Thank you for signing up!"); // fake submission
+  closeModal();
+}
+</script>
+<section class="description fade-in">
+    <h2>OUR HUMBLE BEGINNINGS</h2>
+    <p>NeonFlow Studio was born out of the collaborative vision of three university friends: Alex, Sophie, and Raj. Each one brought their unique skills and background to the table. Alex, a graphic designer with a keen eye for aesthetics, Sophie, a front-end developer with a passion for clean code, and Raj, a full-stack developer focused on backend architecture, realized they had complementary skills that could revolutionize the way websites were built. After working on freelance projects together, they decided to form a company that would focus on delivering high-quality, responsive websites for clients of all sizes.
+The name “NeonFlow” came from their shared love of vibrant, bold designs and the idea of a continuous, glowing flow of creativity and technology. They believed that just like neon lights, websites should capture attention and leave a lasting impression.</p>
+</section>
 </body>
 </html>
