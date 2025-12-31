@@ -1,0 +1,100 @@
+body {
+    background-color: #0b0f14;
+    font-family: 'Courier New', Courier, monospace;
+    color: aqua;
+    margin: 0;
+}
+
+.card {
+    flex: 0 0 auto;
+    text-align: center;
+    margin-top: 120px;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    padding-left: 50px;
+    border: aqua;
+    border-width: 10px;
+    border-radius: 10px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+}
+
+body::-webkit-scrollbar {
+    width: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #0b0f14;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: aqua;
+    border-radius: 10px;
+    border: 2px;
+}
+
+.card-text {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.hero {
+    background-color: #090c12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    gap: 50px;
+}
+
+.typing-effect {
+    font-family: monospace;
+    font-size: 100px;
+}
+
+.photos {
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: 20px;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.card {
+    flex: 0 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
