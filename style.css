@@ -1,7 +1,7 @@
 body {
-    background-color: #0b0f14;
+    background-color: #ebebeb;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: aqua;
+    color: rgb(255, 255, 0);
     margin: 0;
     font-weight: bolder;
 }
@@ -42,11 +42,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #0b0f14;
+    background: #ffffff;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: aqua;
+    background-color: rgb(255, 238, 0);
     border-radius: 10px;
     border: 2px;
 }
@@ -57,10 +57,11 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 20px;
     padding-left: 30px;
     text-align: left;
+    color: #0800a7;
 }
 
 .hero {
-    background-color: #090c12;
+    background-color: #0800a7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,48 +101,10 @@ body::-webkit-scrollbar-thumb {
 .card:hover {
     transform: scale(1.05);
 }
-/* POPUP BACKGROUND */
-.modal {
-  display: none; /* hidden by default */
-  position: fixed; /* stay in place */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* dark overlay */
-  justify-content: center;
-  align-items: center;
-  float: right;
-}
-
-/* POPUP BOX */
-.modal-content {
-  background: black;
-  color: white;
-  padding: 20px;
-  border: 2px solid cyan;
-  text-align: center;
-  width: 300px;
-  border-radius: 10px;
-}
-
-/* CLOSE BUTTON */
-.close {
-  float: right;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-input {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 80%;
-}
 
 button {
   padding: 20px 20px;
-  background: cyan;
+  background: #0800a7;
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -152,6 +115,7 @@ button {
 .description {
     padding: 20px;
     font-weight: bolder;
+    color: #0800a7;
 }
 
 html {
@@ -159,5 +123,14 @@ html {
 }
 .typing-effect{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-shadow: aqua aqua aqua;
+    font-size: 450%;
+}
+
+.location {
+    border-radius: 10px;
+    color: #0800a7;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    align-items: center;
+    border-color: #0800a7,20px;
 }
