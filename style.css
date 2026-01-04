@@ -1,211 +1,144 @@
-body {
-    background-color: #e0e0e0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #f4d03f;
-    margin: 0;
-    font-weight: bolder;
-}
-
-html {
-    scroll-behavior: smooth;
+html, body {
+  margin: 0;
+    background:linear-gradient(135deg ,#ff9bb2, #f4c6d4);
+  font-family: Arial, sans-serif;
 }
 
 .hero {
-    background-color: #1e2a47;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-    text-align: center;
-    box-sizing: border-box;
-    gap: 50px;
+  display: flex;               
+  justify-content: center;    
+  align-items: center;         
+  background:radial-gradient(#ff6f91,#f91c50 70%);
+  width: 100%;                
+  height: 72vh;                
+  color: white;                
+  text-align: center;          
+  flex-direction: column;   
+  font-family: Poppins;
+  font-weight: bolder;
+
 }
 
-.typing-effect {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 450%;
-    color: #f4d03f;
+.images {
+  display: flex;              
+  gap: 20px;                 
+  flex-wrap: wrap;           
+  justify-content: center;   
+  margin-top: 250px;
+  padding-bottom: 250px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.card {
-    flex: 0 0 auto;
-    text-align: center;
-    margin-top: 120px;
-    max-width: 300px;
-    transition: transform 0.3s ease-in-out;
+.images img {
+  width: 200px;              
+  height: 200px;         
+  object-fit: cover;         
+  border-radius: 15px;   
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;   
 }
 
-.image-box {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    padding-left: 50px;
-    border-radius: 30px;
+.images img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+ .nails {
+  justify-content: center;
+  text-align: center;
+  color: #f91c50;
+  margin-top: 200px;
+  font-family: Dancing Script;
+  font-size: 4rem;
+  font-weight: bolder;
+ }
+
+
+.hero-title,
+.hero-desc {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
 }
 
-.image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
+.hero-desc {
+  animation-delay: 0.6s;
 }
 
-.image-box:hover img {
-    transform: scale(1.1);
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.card-text {
-    margin-top: 25px;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    padding-left: 30px;
-    text-align: left;
-    color: #1e2a47;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-.cards {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    flex-wrap: nowrap;
-    padding: 20px;
-    overflow-x: auto;
-    width: 100%;
+::-webkit-scrollbar-track {
+  background:#ff6f91;
 }
 
-.card:hover {
-    transform: scale(1.05);
+::-webkit-scrollbar-thumb {
+  background: #f91c50;
+  border-radius: 12px;
 }
 
-button {
-    padding: 20px;
-    background: #1e2a47;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    cursor: pointer;
-    font-weight: bold;
-    color: #f4d03f;
-    border-radius: 15px;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 9px;
-    position: absolute;
-    top: 40px;
-    left: -10;
+.info-container {
+  color: #f91c50;
+  font-family: Arial, sans-serif;
+  font-weight: bolder;
+  padding: 20px;
+
+
+  width: 90vw;
+  min-height: 35vh;
+
+
+  margin: auto;
+  box-sizing: border-box;
+
+
+  border: 2px solid currentColor;
+  background: transparent;
+  border-radius: 20px;
+  margin-bottom: 60px;
 }
 
-button:hover {
-    background: #293c6f;
+.growing-container {
+  color: #f91c50;
+  font-family: Arial, sans-serif;
+  font-weight: bolder;
+  padding: 20px;
+
+
+  width: 90vw;
+  min-height: 35vh;
+
+
+  margin: auto;
+  box-sizing: border-box;
+
+
+  border: 2px solid currentColor;
+  background: transparent;
+  border-radius: 20px;
+  margin-bottom: 20px;
+
 }
 
-.location {
-    border-radius: 10px;
-    color: #1e2a47;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    overflow: hidden;
-    font-size: 75%;
-    text-align: center;
-    padding: 40px 0;
+.hero svg {
+  position: absolute;
+  left: 0;
+  bottom: 100px; 
+  width: 100%;
+  z-index: 2;
 }
 
-.footer-btn {
-    text-align: start;
-    background-color: #1e2a47;
-    color: #f4d03f;
-    width: 100px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    text-decoration: none;
+.curve path {
+  fill:#f91c50;
 }
 
-.footer-btn:hover {
-    background-color: #293c6f;
-}
-
-body::-webkit-scrollbar {
-    width: 20px;
-}
-
-body::-webkit-scrollbar-track {
-    background: #e0e0e0;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #f4d03f;
-    border-radius: 10px;
-    border: 2px solid #1e2a47;
-}
-
-.fade-in {
-    color: #1e2a47;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    font-size: 100%;
-    color: #1e2a47;
-}
-
-nav a {
-    color: #f4d03f;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: #1e2a47;
-}
-
-.photos {
-    padding: 20px;
-    border: 5px solid #1e2a47;
-}
-
-.fade-in {
-    color: #f4d03f;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-}
-
-.about {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    position: absolute;
-    top: 40px;
-    font-size: 650%;
-    text-align: center;
-}
-
-.desc {
-    font-weight: bolder;
-}
-
-.home {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    text-decoration: none;
-    color: #f4d03f;
+.foods {
+  display: inline-block;
+  margin-top: 20px;
 }
